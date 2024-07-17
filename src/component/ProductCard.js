@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({ item, authenticate, setAuthenticate }) => {
+const ProductCard = ({ item, authenticate}) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {
