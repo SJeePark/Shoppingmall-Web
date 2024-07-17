@@ -1,15 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const ProductCard = () => {
+const ProductCard = ({ item, authenticate, setAuthenticate }) => {
+  const navigate = useNavigate();
+
+  const goToDetail = () => {
+    console.log('Authenticate value:', authenticate);
+    if (authenticate) {
+      navigate(`/product/${item?.id}`);
+    } else {
+      navigate('/login');
+    }
+  }
+
   return (
-    <div>
-      <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F46%2Fba%2F46baea8827983788777dc9e0cd595827610e45aa.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"></img>.
-      <div>Conscious choice</div>
-      <div>벨티드 트월 코트</div>
-      <div>$98</div>
-      <div>신제품</div>
+    <div className='card' onClick={goToDetail}>
+      <img src={item?.img} width={'100%'} alt={item?.title} />
+      <div>{item?.choice === true ? "Choice Conscious" : ""}</div>
+      <div>{item?.title}</div>
+      <div>{item?.price}</div>
+      <div>{item?.new === true ? "신제품" : ""}</div>
     </div>
   )
 }
 
-export default ProductCard
+export default ProductCard;

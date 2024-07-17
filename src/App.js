@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './component/Navbar';
@@ -15,13 +17,19 @@ import ProductDetail from './page/ProductDetail';
 // 8. 상품 검색할 수 있다. 
  
 function App() {
+  const [authenticate,setAuthenticate]=useState(false)  //true면 로그인, false면 로그인X
+  
+  useEffect(()=>{
+    console.log('aaaa', authenticate)
+  }, [authenticate])
+
   return (
     <div>
     <Navbar />
     <Routes>
-      <Route path='/' element={<ProductAll />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/product/:id' element={<ProductDetail />} />
+      <Route path='/' element={<ProductAll/>} />
+      <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
+      <Route path='/product/:id' element={<ProductDetail/>} />
     </Routes>
     </div>
   );
