@@ -1,3 +1,4 @@
+/* Navbar */
 .login-button{
     display: flex;
     justify-content: flex-end;
@@ -48,6 +49,8 @@ input{
     height: 25px;
 }
 
+
+/* ProductCard */
 .card{
     border: none;
     display: flex;
@@ -59,4 +62,33 @@ input{
     width: 110%;
     height: auto;
     cursor: pointer;
+}
+
+
+/* ProductDetail */
+.product-img{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-detail{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.price-detail{
+    font-size: 20px;
+}
+
+.add-button{
+    width: 90%;
+    text-align: center;
+}
+
+.size-option{
+    width: 25%;
+}
+
+.detail-section div{
+    margin: 20px;
 }
