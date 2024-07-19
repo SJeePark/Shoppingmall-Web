@@ -14,14 +14,26 @@
 .nav-section{
     display: flex;
     justify-content: center;
+    
 }
+
+.nav-section img{
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
 
 .menu-list{
     display: flex;
     list-style: none;
     justify-items: center;
-    margin-left: auto;
-    padding-left: 15%;
+    margin-left: 28%;
 }
 
 .menu-list li{
@@ -38,15 +50,18 @@
     border: none;
     border-bottom: 1px solid black;
     height: 30px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: 25px;
+
 }
 
 input{
     border:none;
     padding-left: 8px;
     height: 25px;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: none;
 }
 
 

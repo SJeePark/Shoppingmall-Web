@@ -25,7 +25,7 @@ const ProductDetail = () => {
       <Col className='detail-section'>
         <div className='title-detail'>{product?.title}</div>
         <div className='price-detail'>￦{product?.price}</div>
-        <div className='conscious-detail'><div>{product?.choice === true ? "Choice Conscious" : ""}</div></div>
+        <div className='conscious-detail'>{product?.choice === true ? "Choice Conscious" : ""}</div>
       
         <Col>
         <Form.Select aria-label="Default select example" className='size-option'>
