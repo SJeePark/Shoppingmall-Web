@@ -82,6 +82,12 @@ input{
     font-size: small;
 }
 
+/* ProductAll */
+.mini-title{
+    margin: 5% 0% 1% 6%;
+    font-size: 25px;
+}
+
 
 
 
@@ -169,6 +175,7 @@ footer img :hover{
 
 .address{
     padding: 25px;
+    font-size: 13px;
 }
 
 

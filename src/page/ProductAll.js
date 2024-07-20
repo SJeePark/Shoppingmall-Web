@@ -25,6 +25,9 @@ const ProductAll = () => {
   return (
     <div>
       <SlideBanner />
+      <div>
+        <p className='mini-title'>▼ Watch some items</p>
+      </div>
       <Container>   {/*Container(부트스트랩):아이템이 가운데로 모이게 해주는 역할*/}
         <Row>
         {productList.map((menu, index)=><Col key={index} lg={3}><ProductCard item={menu}/></Col>)}

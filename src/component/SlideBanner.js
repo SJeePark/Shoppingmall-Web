@@ -17,9 +17,7 @@ const SlideBanner = () => {
         modules={[Autoplay]}
         spaceBetween={10}
         slidesPerView={isMobile ? 1 : 3}
-        autoplay={{ delay: 5000 }}	
-        
-        
+        autoplay={{ delay: 4500 }}	
       >
         <SwiperSlide><img src='https://i.pinimg.com/736x/9f/72/9b/9f729bcb28da64361ef68834344a76dc.jpg' alt='Slide 4'></img></SwiperSlide>
         <SwiperSlide><img src='https://i.pinimg.com/564x/ad/34/1a/ad341aea949cb85ac648ffd609d51c1c.jpg'></img></SwiperSlide>
