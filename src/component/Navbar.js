@@ -70,10 +70,10 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         </div>
         </div>
         )}
+
       </div>
 
-      {isMobile && <Sidebar />}
-
+      {isMobile && <Sidebar serach = {search}/>}
     </div>
   );
 };

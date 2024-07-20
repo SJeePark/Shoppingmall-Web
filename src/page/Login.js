@@ -16,7 +16,7 @@ const Login = ({setAuthenticate}) => {
       <Form onSubmit={(event)=>loginUser(event)}>  {/*Form은 입력받은 정보를 백엔드로 보내고 싶을 때 사용*/}
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control width={'50%'} type="email" placeholder="Enter email" />
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
@@ -25,9 +25,6 @@ const Login = ({setAuthenticate}) => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <Button variant="danger" type="submit">   {/*type이 submit이면 onClick 불가, onSubmit으로 설정*/}
         Login

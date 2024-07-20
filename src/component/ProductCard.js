@@ -1,22 +1,25 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({ item}) => {
+const ProductCard = ({ item }) => {
   const navigate = useNavigate();
 
-  const showDetail=()=>{
-    navigate(`/product/${item.id}`)
-  }
+  const showDetail = () => {
+    navigate(`/product/${item.id}`);
+  };
 
   return (
-    <div className='card' onClick={showDetail}>
-      <img src={item?.img} width={'100%'} />
-      <div>{item?.choice === true ? "Choice Conscious" : ""}</div>
-      <div>{item?.title}</div>
-      <div>￦{item?.price}</div>
-      <div>{item?.new === true ? "신제품" : ""}</div>
-    </div>
-  )
-}
+    <div>
+      <div className='card' onClick={showDetail}>
+        <img src={item?.img} width={'100%'} alt='Product' />
+        <div className='product-title'>{item?.title}</div>
+        <div>￦{item?.price}</div>
+        <div className='new'>{item?.new ? '신제품' : ''}</div>
+        <div className='choice'>{item?.choice ? 'Choice Conscious' : ''}</div>
+      </div>  
+      </div>
+      
+    );
+};
 
 export default ProductCard;

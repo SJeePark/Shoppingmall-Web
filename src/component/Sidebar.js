@@ -3,7 +3,7 @@ import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap
 
 const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성'];
 
-function Sidebar() {
+function Sidebar({search}) {
   return (
     <>
       {[false].map((expand) => (
@@ -35,7 +35,7 @@ function Sidebar() {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button variant="outline-success" onKeyPress={search}>Search</Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
